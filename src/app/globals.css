@@ -10,6 +10,12 @@
   }
 }
 
+@layer utilities {
+  .container {
+    @apply px-2 lg:max-w-5xl mx-auto;
+  }
+}
+
 .waving-hand {
   animation-name: wave-animation;
   animation-duration: 2.5s;
