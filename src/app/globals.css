@@ -12,7 +12,7 @@
 
 @layer utilities {
   .container {
-    @apply px-2 lg:max-w-5xl mx-auto;
+    @apply px-2 md:px-8 lg:max-w-5xl mx-auto;
   }
 }
 

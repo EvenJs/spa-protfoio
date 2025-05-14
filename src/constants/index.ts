@@ -7,6 +7,14 @@ import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
 import memojiAvatar4 from "@/assets/images/memoji-avatar-4.png";
 import memojiAvatar5 from "@/assets/images/memoji-avatar-5.png";
 
+import JavascriptIcon from "@/assets/icons/square-js.svg";
+import CssIcon from "@/assets/icons/css3.svg";
+import HTMLIcon from "@/assets/icons/html5.svg";
+import ReactIcon from "@/assets/icons/react.svg";
+import GithubIcon from "@/assets/icons/github.svg";
+import NextIcon from "@/assets/icons/nextjs.svg";
+
+
 export const portfolioProjects = [
   {
     company: "Acme Corp",
@@ -82,3 +90,23 @@ export const testimonials = [
     avatar: memojiAvatar5,
   },
 ];
+
+export const toolboxItems = [
+  { title: "JavaScript", iconType: JavascriptIcon, },
+  { title: "HTML5", iconType: HTMLIcon, },
+  { title: "CSS3", iconType: CssIcon, },
+  { title: "React", iconType: ReactIcon, },
+  { title: "Next.JS", iconType: NextIcon, },
+  { title: "Github", iconType: GithubIcon, },
+]
+
+export const hobbies = [
+  { title: "Fitness", emoji: "🏋️‍♀️", left: "5%", top: "5%" },
+
+  { title: "Gaming", emoji: "🎮", left: "50%", top: "5%" },
+  { title: "Reading", emoji: "📚", left: "35%", top: "30%" },
+  { title: "Sports", emoji: "⚽️", left: "5%", top: "65%" },
+  { title: "Cooking", emoji: "🍳", left: "60%", top: "45%" },
+  { title: "Music", emoji: "🎵", left: "10%", top: "35%" },
+  { title: "Traveling", emoji: "✈️", left: "45%", top: "70%" },
+]
