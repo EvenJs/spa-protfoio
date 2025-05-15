@@ -110,3 +110,10 @@ export const hobbies = [
   { title: "Music", emoji: "🎵", left: "10%", top: "35%" },
   { title: "Traveling", emoji: "✈️", left: "45%", top: "70%" },
 ]
+
+export const footerLinks = [
+  { title: "LinkedIn", href: "", },
+  { title: "Github", href: "", },
+  { title: "Instagram", href: "", },
+  { title: "Twitter", href: "", },
+]

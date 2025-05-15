@@ -1,6 +1,7 @@
 import {
   About,
   Contact,
+  Footer,
   Header,
   Hero,
   Projects,
@@ -18,6 +19,7 @@ export default function Home() {
       <Testimonials />
       <About />
       <Contact />
+      <Footer />
     </div>
   );
 }
