@@ -1,11 +1,16 @@
-import React from "react";
+"use client";
+
+import React, { useRef } from "react";
 import Image from "next/image";
 
 import bookImage from "@/assets/images/book-cover.png";
 import { hobbies, toolboxItems } from "@/constants";
 import { Card, CardHeader, SectionHeader, ToolboxItems } from "@/components";
+import { motion } from "framer-motion";
 
 const About = () => {
+  const constrainRef = useRef(null);
+
   return (
     <div className="py-20 lg:py-28">
       <div className="container">
@@ -32,11 +37,15 @@ const About = () => {
                 digital experiences."
                 className="px-6 pt-6"
               />
-              <ToolboxItems items={toolboxItems} className="" />
+              <ToolboxItems
+                items={toolboxItems}
+                className=""
+                itemsWrapperClassName="animate-move-left [animation-duration:30s]"
+              />
               <ToolboxItems
                 items={toolboxItems}
                 className="mt-6 "
-                itemsWrapperClassName="-translate-x-1/2"
+                itemsWrapperClassName="animate-move-right [animation-duration:15s]"
               />
             </Card>
           </div>
@@ -48,18 +57,20 @@ const About = () => {
                 className="p-6"
               />
 
-              <div className="relative flex-1">
+              <div className="relative flex-1" ref={constrainRef}>
                 {hobbies.map((hobby) => (
-                  <div
+                  <motion.div
                     key={hobby.title}
                     className="inline-flex items-center gap-2 px-6 bg-gradient-to-br from-emerald-300 to-sky-400 rounded-full py-1.5 absolute"
                     style={{ left: hobby.left, top: hobby.top }}
+                    drag
+                    dragConstraints={constrainRef}
                   >
                     <span className="font-medium text-gray-950">
                       {hobby.title}
                     </span>
                     <span>{hobby.emoji}</span>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </Card>
